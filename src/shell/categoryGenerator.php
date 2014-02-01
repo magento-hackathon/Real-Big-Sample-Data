@@ -10,7 +10,7 @@ class Mage_Shell_Category_Generator extends Mage_Shell_Abstract
 	public $rootCategories;
 	public $categoryRecursion;
 
-	public function __construct(){
+	public function setDefaults(){
 
 		
 		
@@ -28,6 +28,9 @@ class Mage_Shell_Category_Generator extends Mage_Shell_Abstract
     {
     	//Composer Autoload
     	require_once(Mage::getBaseDir('base') . '/vendor/autoload.php' );    	
+    	
+    	//Set Defaults
+    	$this->setDefaults();
     	
     	$executedRun = false;   //Check against, instead of using if/else on args
     	
