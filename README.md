@@ -1,34 +1,61 @@
-ORIGINAL REQUEST:
-Mainly for performance research I would like to have a real real big dataset which covers all imaginably performance edge cases.
-some of them are:
+Hackathon Big Sample Data
+===================
+
+Introduction
+------------
+This module has been conceived during the **Magento Hackathon 2014** (31st Jan - 1st Feb). Read more on the Hackathon site: http://www.mage-hackathon.de/upcoming/online-hackathon-worldwide-31st-jan-1st-feb.html
+
+The goal of this is to create a series of functions to generate sample data for testing. Really big datasets can be generated using templates and some randomizing and iteration. These can be created and then exported and used for the testing.
+
+The module will likely have some dependant extensions. Additionally we are looking to integrate with n98-magerun, so the development scripts are just an aid to that end.
+
+**Planned Datasets**
 * many many categories whith more then 5 levels of depth. lets say 1k+ categories
 * configurable products with several options ( in the end 1 configurable = 10k+ simples {20×10×4×6×3}
 * multiple websites/stores/storeviews ( should end in 1k storeviews )
-Its ok(and suggested) if it ends in a script, which randomly creates this into files readable by an Importer, as this would speed up the generation and the importer can care in the end of optimize the saving to magento.
 
----------------------
-During Development we are going to have three shell scripts, one for each of the items above. They will live in shell/ and if we keep them light we can integrate into n98-magerun easily, later after the hackathon.
 
+**Categories:**
 Categories generator will generate a structure based on the random data or a template category tree of "normal store categories". Some iteration will be needed to create "root categories" in addition to a template, or tree with some variance. Categories should be the first part to be done, as the website generator will need root categories. 
 
+**Websites/Stores/Store Views:**
 Websites, Stores, Store Views will generate the data that is needed to create the stores and will accept a few variables that control the number of stores, and the number of store views. Other settings that need to be considered are the root category, and any system configuration settings.
-Additionally it would be nice to set currency and language on some sets of the store views, as well as add some variance to the settings that are saved in system configuration. 
+Additionally it would be nice to set currency and language on some sets of the store views, as well as add some variance to the settings that are saved in system configuration.
 
+**Products:**
 Products should use: https://github.com/avstudnitz/AvS_FastSimpleImport
 Some modification will need to be made to create a pool of random names and data. It would be nice to have images, but it may not be needed.
 FastSimpleImport can easily accomodate the various product types that are needed.
 
-As for variance and randomization, we should look to find something VERY light that can be used for all of the functions
-
----------------------
-OTHER STUFF:
-Orders,quotes,sales rules, and so on were all suggested. Due to the scope of the hackathon these will have to be added later.
-
-It would be great to see this work as part of n98-magerun. Fabrizo helped find us a few leads on how to create the extension for n98.
-http://alanstorm.com/developing_commands_for_n98-magerun
-
-https://github.com/netz98/n98-magerun/blob/master/src/N98/Magento/Command/Customer/CreateDummyCommand.php
-
-http://blog.muench-worms.de/n98-magerun-modulsystem/
 
 
+Installation
+------------
+To install this module you need modman Module Manager: https://github.com/colinmollenhour/modman
+
+After having installed modman on your system, you can clone this module on your Magento root folder by typing the following commands:
+
+```
+$ modman init
+$ modman clone giturl here please
+```
+
+Configuration
+-------------
+No configuration in magento backend. Template files(XML) for datasets will be used for settings on the various datasets.
+
+Usage
+-----
+Coming Soon.
+
+COMPATIBILITY
+-------------
+Here follows the list of versions the module has been tested on:
+
+* Magento CS v 1.8.0.0
+
+Note: if a version different from the ones listed above doesn't compare, it doesn't necessarily mean that the module won't work on that. If you try the module on different version and it works, please notify the author in order to update the compatibility list. It will be appreciated.
+
+RELEASE NOTES
+-------------
+* 1.0.0 - the first implementation
