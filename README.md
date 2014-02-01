@@ -65,6 +65,12 @@ Configuration
 -------------
 No configuration in magento backend. Template files(XML) for datasets will be used for settings on the various datasets.
 
+
+Dependancy List
+------------
+Faker is a PHP library that generates fake data for you: https://github.com/fzaninotto/Faker  (Thanks flyingmana for pointing it out)
+
+
 Usage
 -----
 Coming Soon.

@@ -40,8 +40,8 @@ class Mage_Shell_Category_Generator extends Mage_Shell_Abstract
         if ($this->dryrun) {
         	$executedRun = true;  // Set to true, now help wont trigger.
         	echo "Dry run initiated.\n";
-        	print_r($this);
-        	
+
+
         	exit;
         }
         
