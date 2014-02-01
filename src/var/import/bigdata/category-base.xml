@@ -1,9 +1,21 @@
 <?xml version="1.0"?>
 <categories>
-	<root>
+	<root type="flat" name="Root Category" is_active="true" >
 		<category name="Furniture" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText">
 			<category name="Living Room" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText"></category>
-			<category name="Bedroom" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText"></category>
+			<category name="Bedroom" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText">
+				<category name="Beds" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText">
+					<category name="Blankets" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText">
+						<category name="Warm" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText">
+							<category name="Fuzzy" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText">						
+							</category>	
+							<category name="Heavy" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText">
+							</category>														
+						</category>					
+					</category>
+					<category name="Pillows" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText"></category>
+				</category>
+			</category>
 		</category>
 		<category name="Electronics" is_active="true" description="loremText" meta_title="randomText:32">
 			<category name="Cell Phones" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText"></category>
