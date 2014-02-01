@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Magehack_Bigdata>
+            <version>0.0.1</version>
+        </Magehack_Bigdata>
+    </modules>
+    <global>
+        <helpers>
+            <bigdata>
+                <class>Magehack_Bigdata_Helper</class>
+            </bigdata>
+        </helpers>
+    </global>
+</config>

@@ -1,2 +1,4 @@
-src/shell/*                       shell/
-src/var/import/bigdata/			  var/import/bigdata/
+src/shell/*                     	shell/
+src/var/import/bigdata/				var/import/bigdata/
+src/app/etc/modules/*				app/etc/modules/
+src/app/code/community/Magehack/*	app/code/community/Magehack/
