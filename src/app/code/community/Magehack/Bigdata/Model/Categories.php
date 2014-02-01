@@ -1,5 +1,5 @@
 <?php 
-class Magehack_Bigdata_Model_Generate extends Mage_ImportExport_Model_Import
+class Magehack_Bigdata_Model_Categories extends Mage_ImportExport_Model_Import
 {
 	public $dryrun;
 	

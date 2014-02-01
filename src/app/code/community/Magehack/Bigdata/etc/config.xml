@@ -12,9 +12,9 @@
             </bigdata>
         </helpers>
         <models>
-        	<categorygenerator>
+        	<generator>
         		<class>Magehack_Bigdata_Model</class>
-        	</categorygenerator>
+        	</generator>
         </models>
     </global>
 </config>

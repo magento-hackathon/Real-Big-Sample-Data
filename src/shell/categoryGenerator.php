@@ -36,13 +36,13 @@ class Mage_Shell_Category_Generator extends Mage_Shell_Abstract
     	
         $args = $this->_parseArgs(); // args can be non-linear
         
-        $_categoryGenerator = Mage::getSingleton('categorygenerator/generate');
+        $_categoryGenerator = Mage::getSingleton('generator/categories');
         
         if ($this->dryrun) {
         	echo "Dry run initiated.\n";
         	$_categoryGenerator->setDryRun(true);
         }
-        
+
        //Check Template
         //$_categoryGenerator->setTemplate($this->template);
         
