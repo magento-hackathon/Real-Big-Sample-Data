@@ -2,6 +2,7 @@
 
 require_once( dirname( $_SERVER['argv'][0] ) . '/abstract.php' );
 
+
 class Mage_Shell_Category_Generator extends Mage_Shell_Abstract
 {
 	public $dryrun;
@@ -10,6 +11,9 @@ class Mage_Shell_Category_Generator extends Mage_Shell_Abstract
 	public $categoryRecursion;
 
 	public function __construct(){
+
+		
+		
 		//Setting the defaults
 		$this->dryrun = false;
 		$this->template = "category-base.xml";
@@ -22,6 +26,9 @@ class Mage_Shell_Category_Generator extends Mage_Shell_Abstract
      */
     public function run()
     {
+    	//Composer Autoload
+    	require_once(Mage::getBaseDir('base') . '/vendor/autoload.php' );    	
+    	
     	$executedRun = false;   //Check against, instead of using if/else on args
     	
         $args = $this->_parseArgs(); // args can be non-linear
@@ -35,6 +42,9 @@ class Mage_Shell_Category_Generator extends Mage_Shell_Abstract
         	exit;
         }
         
+        //Check Template
+        
+        // Fallback to some helpful help message
         if(!$executedRun)
         {
             echo $this->usageHelp();
