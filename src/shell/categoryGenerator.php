@@ -11,15 +11,13 @@ class Mage_Shell_Category_Generator extends Mage_Shell_Abstract
 	public $categoryRecursion;
 
 	public function setDefaults(){
-
-		
-		
 		//Setting the defaults - Perhaps out of scope, should be in model?
 		$this->dryrun = false;
 		$this->template = "category-base.xml";
 		$this->rootCategories = 1;
 		$this->categoryRecursion = 1;
 	}
+	
     /**
      * Run script
      *
@@ -40,21 +38,26 @@ class Mage_Shell_Category_Generator extends Mage_Shell_Abstract
         
         if ($this->dryrun) {
         	echo "Dry run initiated.\n";
-        	$_categoryGenerator->setDryRun(true);
+        	$_categoryGenerator->setDryRun();
         }
 
-       //Check Template
-        //$_categoryGenerator->setTemplate($this->template);
-        
         // Settings
-        //$_categoryGenerator->setRootCategories($this->rootCategories);
-        //$_categoryGenerator->setCategoryRecursion($this->categoryRecursion);
+        $_categoryGenerator->setRootCategories($this->rootCategories);
+        $_categoryGenerator->setCategoryRecursion($this->categoryRecursion);
+        $_categoryGenerator->setTemplate($this->template);
         
-        //Run generator
-        //$executedRun =  $_categoryGenerator->generate();
+        if(count($_categoryGenerator->error) > 0){
+        	//print_r($_categoryGenerator);
+        	echo "Errors have occured in pre-processing the generator settings:\n";
+        	print_r($_categoryGenerator->error);
+        	$executedRun = true;
+        }else{
+        	//Run generator
+        	$executedRun =  $_categoryGenerator->generate();        	
+        	$executedRun = true;  
+        }
         
         
-        $executedRun = true;  // Set to true, now help wont trigger.
         
         // Fallback to some helpful help message
         if(!$executedRun)
