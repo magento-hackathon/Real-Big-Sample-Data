@@ -1,6 +1,6 @@
 <?php
 
-require_once 'abstract.php';
+require_once( dirname( $_SERVER['argv'][0] ) . '/abstract.php' );
 
 class Mage_Shell_Products_Generator extends Mage_Shell_Abstract
 {
@@ -11,13 +11,29 @@ class Mage_Shell_Products_Generator extends Mage_Shell_Abstract
      */
     public function run()
     {
-        if ($this->getArg('stub')) {
-
+        $args = $this->_parseArgs();
+        if ($args[0] == "stub") {
+        	print_r($args);
         } else {
             echo $this->usageHelp();
+
         }
     }
 
+    /**
+     * Get the real cleaned argv
+     *
+     * @return array
+     */
+    protected function _parseArgs() {
+    	$args = array_slice(
+    			array_filter( $_SERVER['argv'],
+    					create_function( '$e',
+    							'return $e != \'--\';' ) ),
+    			1 );
+    	return $args;
+    }    
+    
     /**
      * Retrieve Usage Help Message
      *
@@ -29,6 +45,7 @@ Usage:  php -f productsGenerator.php -- [options]
 
   stub                    Example
   help                          This help
+        
 USAGE;
     }
 }
