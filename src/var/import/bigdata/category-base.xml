@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 <categories>
 	<root>
-		<category name="Furniture" active="true">
-			<category name="Living Room" active="true"></category>
-			<category name="Bedroom" active="true"></category>
+		<category name="Furniture" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText">
+			<category name="Living Room" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText"></category>
+			<category name="Bedroom" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText"></category>
 		</category>
-		<category name="Electronics" active="true">
-			<category name="Cell Phones" active="true"></category>
-			<category name="Cameras" active="true"></category>
-			<category name="Computers" active="true"></category>
+		<category name="Electronics" is_active="true" description="loremText" meta_title="randomText:32">
+			<category name="Cell Phones" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText"></category>
+			<category name="Cameras" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText"></category>
+			<category name="Computers" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText" include_in_menu="0"></category>
 		</category>
-		<category name="Apparel" active="true">
-			<category name="Shirts" active="true"></category>
-			<category name="Shoes" active="true"></category>
-			<category name="Hoodies" active="true"></category>
+		<category name="Apparel" is_active="true" description="loremText" meta_title="randomText:32">
+			<category name="Shirts" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText"></category>
+			<category name="Shoes" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText"></category>
+			<category name="Hoodies" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText"></category>
 		</category>
-		<category name="Music" active="true"></category>
-		<category name="Ebooks" active="true"></category>
+		<category name="Music" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText"></category>
+		<category name="Ebooks" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText"></category>
 	</root>
 </categories>

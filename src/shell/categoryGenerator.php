@@ -44,7 +44,7 @@ class Mage_Shell_Category_Generator extends Mage_Shell_Abstract
 Usage:  php -f categoryGenerator.php -- [options]
 
   stub                    Example
-  help                          This help
+  help                    This help
 
 USAGE;
     }
