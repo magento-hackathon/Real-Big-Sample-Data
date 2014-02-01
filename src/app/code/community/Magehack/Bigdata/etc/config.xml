@@ -11,5 +11,10 @@
                 <class>Magehack_Bigdata_Helper</class>
             </bigdata>
         </helpers>
+        <models>
+        	<categorygenerator>
+        		<class>Magehack_Bigdata_Model</class>
+        	</categorygenerator>
+        </models>
     </global>
 </config>

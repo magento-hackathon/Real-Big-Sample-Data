@@ -14,7 +14,7 @@ class Mage_Shell_Category_Generator extends Mage_Shell_Abstract
 
 		
 		
-		//Setting the defaults
+		//Setting the defaults - Perhaps out of scope, should be in model?
 		$this->dryrun = false;
 		$this->template = "category-base.xml";
 		$this->rootCategories = 1;
@@ -36,16 +36,25 @@ class Mage_Shell_Category_Generator extends Mage_Shell_Abstract
     	
         $args = $this->_parseArgs(); // args can be non-linear
         
+        $_categoryGenerator = Mage::getSingleton('categorygenerator/generate');
         
         if ($this->dryrun) {
-        	$executedRun = true;  // Set to true, now help wont trigger.
         	echo "Dry run initiated.\n";
-
-
-        	exit;
+        	$_categoryGenerator->setDryRun(true);
         }
         
-        //Check Template
+       //Check Template
+        //$_categoryGenerator->setTemplate($this->template);
+        
+        // Settings
+        //$_categoryGenerator->setRootCategories($this->rootCategories);
+        //$_categoryGenerator->setCategoryRecursion($this->categoryRecursion);
+        
+        //Run generator
+        //$executedRun =  $_categoryGenerator->generate();
+        
+        
+        $executedRun = true;  // Set to true, now help wont trigger.
         
         // Fallback to some helpful help message
         if(!$executedRun)
