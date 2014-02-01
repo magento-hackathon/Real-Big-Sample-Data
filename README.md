@@ -28,6 +28,27 @@ Some modification will need to be made to create a pool of random names and data
 FastSimpleImport can easily accomodate the various product types that are needed.
 
 
+Generator Templates
+------------
+XML templates with attributes will allow settings for the generators.
+
+**Categories Template:**
+```
+<?xml version="1.0"?>
+<categories>
+	<root>
+		<category name="Furniture" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText">
+			<category name="Living Room" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText"></category>
+			<category name="Bedroom" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText"></category>
+		</category>
+		[snip]
+		<category name="Ebooks" is_active="true" description="loremText" meta_title="randomText:32" meta_description="loremText"></category>
+	</root>
+</categories>
+```
+This is the basic category structure from the Magento Sample Dataset. The idea is to match the attributes against the category attribute. In some cases I have added things like loremText or randomText. These will be caught by the generator and set up the way the category will be created.
+
+
 
 Installation
 ------------
