@@ -1,4 +1,4 @@
-Hackathon Big Sample Data
+Hackathon Big Sample Data (EXPERIMENTAL)
 ===================
 
 Introduction
@@ -11,7 +11,7 @@ The module will likely have some dependant extensions. Additionally we are looki
 
 **Planned Datasets**
 * many many categories whith more then 5 levels of depth. lets say 1k+ categories
-* configurable products with several options ( in the end 1 configurable = 10k+ simples {20×10×4×6×3}
+* configurable products with several options ( in the end 1 configurable = 10k+ simples {20ï¿½10ï¿½4ï¿½6ï¿½3}
 * multiple websites/stores/storeviews ( should end in 1k storeviews )
 
 
