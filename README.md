@@ -7,11 +7,13 @@ This module has been conceived during the **Magento Hackathon 2014** (31st Jan -
 
 The goal of this is to create a series of functions to generate sample data for testing. Really big datasets can be generated using templates and some randomizing and iteration. These can be created and then exported and used for the testing.
 
+This is still very much under development, and does not currently work. The current focus is on category tree generation, which was not implemented correctly during the hackathon. Restructuring the generation and walking of this category tree will be completed first, and then the store generator will be next, and finally the products.
+
 The module will likely have some dependant extensions. Additionally we are looking to integrate with n98-magerun, so the development scripts are just an aid to that end.
 
 **Planned Datasets**
 * many many categories whith more then 5 levels of depth. lets say 1k+ categories
-* configurable products with several options ( in the end 1 configurable = 10k+ simples {20�10�4�6�3}
+* configurable products with several options ( in the end 1 configurable = 10k+ simples {20 x 10 x 4 x 6 x 3}
 * multiple websites/stores/storeviews ( should end in 1k storeviews )
 
 
