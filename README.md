@@ -1,4 +1,4 @@
-Hackathon Big Sample Data (EXPERIMENTAL)
+Hackathon Big Sample Data (PLANNING PHASE)
 ===================
 
 Introduction
